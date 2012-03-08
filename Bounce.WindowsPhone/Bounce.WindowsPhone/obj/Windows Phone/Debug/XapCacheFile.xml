@@ -1,14 +1,14 @@
-﻿<xapCache source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="08/03/2012 16:11:58">
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\Background.png" archivePath="Background.png" lastWriteTime="08/03/2012 14:55:46" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="08/03/2012 14:55:46" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="08/03/2012 16:11:57" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="08/03/2012 14:56:02" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.dll" archivePath="Bounce.WindowsPhone.dll" lastWriteTime="08/03/2012 16:11:57" />
-  <file source="C:\Development\Personal\Bounce\packages\FarseerPhysicsXNAWP7.3.3.1.37294\lib\net40-Client\FarseerPhysicsXNAWP7.dll" archivePath="FarseerPhysicsXNAWP7.dll" lastWriteTime="08/03/2012 15:14:28" />
-  <file source="C:\Development\Personal\Bounce\Libs\xTile.dll" archivePath="xTile.dll" lastWriteTime="13/08/2011 15:07:15" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Maps\Map01.xnb" archivePath="Content\Maps\Map01.xnb" lastWriteTime="08/03/2012 16:11:56" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb" archivePath="Content\TileSheets\Background01.xnb" lastWriteTime="08/03/2012 16:11:56" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb" archivePath="Content\TileSheets\Background02.xnb" lastWriteTime="08/03/2012 16:11:56" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb" archivePath="Content\TileSheets\Background03.xnb" lastWriteTime="08/03/2012 16:11:57" />
-  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb" archivePath="Content\TileSheets\TileSheet01.xnb" lastWriteTime="08/03/2012 16:11:57" />
+﻿<xapCache source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="08/03/2012 16:35:34">
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\Background.png" archivePath="Background.png" lastWriteTime="08/03/2012 16:26:12" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="08/03/2012 16:26:12" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="08/03/2012 16:35:33" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="08/03/2012 16:28:15" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.dll" archivePath="Bounce.WindowsPhone.dll" lastWriteTime="08/03/2012 16:35:33" />
+  <file source="C:\Development\Personal\Bounce\packages\FarseerPhysicsXNAWP7.3.3.1.37294\lib\net40-Client\FarseerPhysicsXNAWP7.dll" archivePath="FarseerPhysicsXNAWP7.dll" lastWriteTime="08/03/2012 16:35:25" />
+  <file source="C:\Development\Personal\Bounce\xTile.dll" archivePath="xTile.dll" lastWriteTime="13/08/2011 15:07:15" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Maps\Map01.xnb" archivePath="Content\Maps\Map01.xnb" lastWriteTime="08/03/2012 16:31:28" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb" archivePath="Content\TileSheets\Background01.xnb" lastWriteTime="08/03/2012 16:31:28" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb" archivePath="Content\TileSheets\Background02.xnb" lastWriteTime="08/03/2012 16:31:28" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb" archivePath="Content\TileSheets\Background03.xnb" lastWriteTime="08/03/2012 16:31:28" />
+  <file source="C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb" archivePath="Content\TileSheets\TileSheet01.xnb" lastWriteTime="08/03/2012 16:31:28" />
 </xapCache>

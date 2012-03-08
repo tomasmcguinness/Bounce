@@ -1,4 +1,0 @@
-C:\Development\Personal\Bounce\TiledLib\bin\x86\Debug\TiledLib.dll
-C:\Development\Personal\Bounce\TiledLib\bin\x86\Debug\TiledLib.pdb
-C:\Development\Personal\Bounce\TiledLib\obj\x86\Debug\TiledLib.dll
-C:\Development\Personal\Bounce\TiledLib\obj\x86\Debug\TiledLib.pdb

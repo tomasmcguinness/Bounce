@@ -9,7 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
-
 using xTile;
 using xTile.Display;
 using xTile.Dimensions;
@@ -49,10 +48,14 @@ namespace Bounce.WindowsPhone
     protected override void Initialize()
     {
       // TODO: Add your initialization logic here
+
       base.Initialize();
 
       mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
-      viewport = new xTile.Dimensions.Rectangle(new Size(800, 480));
+
+      map.LoadTileSheets(mapDisplayDevice);
+
+      viewport = new xTile.Dimensions.Rectangle(new Size(820, 480));
     }
 
     /// <summary>
@@ -66,6 +69,8 @@ namespace Bounce.WindowsPhone
 
       // TODO: use this.Content to load your game content here
       map = Content.Load<Map>("Maps\\Map01");
+
+      //map.LoadTileSheets(mapDisplayDevice);
     }
 
     /// <summary>
@@ -90,6 +95,7 @@ namespace Bounce.WindowsPhone
 
       // TODO: Add your update logic here
       map.Update(gameTime.ElapsedGameTime.Milliseconds);
+      viewport.X++;
 
       base.Update(gameTime);
     }

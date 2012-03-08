@@ -8,22 +8,22 @@
       <Processor>TideProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Maps\Map01.xnb</Output>
-      <Time>2012-03-08T16:11:27.432573+00:00</Time>
+      <Time>2012-03-08T16:27:42.8681609+00:00</Time>
       <Dependency>
         <Key>TileSheets\Background01.png</Key>
-        <Value>2012-03-08T15:59:57.6464953+00:00</Value>
+        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\Background02.png</Key>
-        <Value>2012-03-08T15:59:57.6484955+00:00</Value>
+        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\Background03.png</Key>
-        <Value>2012-03-08T15:59:57.653496+00:00</Value>
+        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\TileSheet01.png</Key>
-        <Value>2012-03-08T15:59:57.6564963+00:00</Value>
+        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
       </Dependency>
       <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Request>
       <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Request>
@@ -37,7 +37,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Output>
-      <Time>2012-03-08T15:59:57.6464953+00:00</Time>
+      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
     </Item>
     <Item>
       <Source>TileSheets\Background02.png</Source>
@@ -46,7 +46,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Output>
-      <Time>2012-03-08T15:59:57.6484955+00:00</Time>
+      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
     </Item>
     <Item>
       <Source>TileSheets\Background03.png</Source>
@@ -55,7 +55,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb</Output>
-      <Time>2012-03-08T15:59:57.653496+00:00</Time>
+      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
     </Item>
     <Item>
       <Source>TileSheets\TileSheet01.png</Source>
@@ -64,11 +64,11 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Output>
-      <Time>2012-03-08T15:59:57.6564963+00:00</Time>
+      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
-      <ContentProjectGUID>{E49A74BD-053C-45A2-8E3C-5F1B25636351}</ContentProjectGUID>
+      <ContentProjectGUID>{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}</ContentProjectGUID>
       <TargetPlatform>WindowsPhone</TargetPlatform>
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
@@ -80,7 +80,7 @@
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Development\Personal\Bounce\Libs\xTile.Pipeline.dll</Key>
+        <Key>C:\Development\Personal\Bounce\xTile.Pipeline.dll</Key>
         <Value>2011-08-13T15:09:44.6598234+01:00</Value>
       </Assembly>
       <Assembly>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{07657ab1-fb42-4c9b-aebf-7242275e707e}" Title="Bounce.WindowsPhone" RuntimeType="XNA" Version="1.0.0.0" Genre="Apps.Normal" Author="" Description="" Publisher="">
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.0">
+  <App xmlns="" ProductID="{c6cc03ee-6d85-475d-8615-84207ae6fb7d}" Title="Bounce.WindowsPhone" RuntimeType="XNA" Version="1.0.0.0" Genre="Apps.Normal" Author="" Description="" Publisher="">
     <IconPath IsRelative="true" IsResource="false">PhoneGameThumb.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -15,9 +15,6 @@
       <Capability Name="ID_CAP_IDENTITY_USER" />
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
       <!-- Windows Phone OS 7.1 Capabilities -->
-      <Capability Name="ID_CAP_ISV_CAMERA" />
-      <Capability Name="ID_CAP_CONTACTS" />
-      <Capability Name="ID_CAP_APPOINTMENTS" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" />
