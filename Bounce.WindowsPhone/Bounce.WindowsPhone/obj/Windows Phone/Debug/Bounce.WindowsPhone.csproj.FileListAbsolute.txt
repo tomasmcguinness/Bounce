@@ -1,0 +1,11 @@
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.dll
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.pdb
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\Bounce.WindowsPhone.dll
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\Bounce.WindowsPhone.pdb
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.xap
+C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\XapCacheFile.xml
