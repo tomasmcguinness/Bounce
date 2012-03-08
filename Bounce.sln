@@ -7,18 +7,34 @@ Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Bounce.WindowsPhoneContent"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Windows Phone = Debug|Windows Phone
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Windows Phone = Release|Windows Phone
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Mixed Platforms.Build.0 = Debug|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Mixed Platforms.Deploy.0 = Debug|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Debug|x86.ActiveCfg = Debug|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Mixed Platforms.Build.0 = Release|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Mixed Platforms.Deploy.0 = Release|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Windows Phone.Build.0 = Release|Windows Phone
 		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{9597F2C2-CC9F-495C-BFF4-515A03EE7F78}.Release|x86.ActiveCfg = Release|Windows Phone
+		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
 		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Debug|x86.ActiveCfg = Debug|Windows Phone
+		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
 		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{E49A74BD-053C-45A2-8E3C-5F1B25636351}.Release|x86.ActiveCfg = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

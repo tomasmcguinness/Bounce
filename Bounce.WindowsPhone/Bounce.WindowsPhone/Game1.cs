@@ -10,6 +10,10 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 
+using xTile;
+using xTile.Display;
+using xTile.Dimensions;
+
 namespace Bounce.WindowsPhone
 {
   /// <summary>
@@ -19,6 +23,10 @@ namespace Bounce.WindowsPhone
   {
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
+
+    Map map;
+    IDisplayDevice mapDisplayDevice;
+    xTile.Dimensions.Rectangle viewport;
 
     public Game1()
     {
@@ -41,8 +49,10 @@ namespace Bounce.WindowsPhone
     protected override void Initialize()
     {
       // TODO: Add your initialization logic here
-
       base.Initialize();
+
+      mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
+      viewport = new xTile.Dimensions.Rectangle(new Size(800, 480));
     }
 
     /// <summary>
@@ -55,6 +65,7 @@ namespace Bounce.WindowsPhone
       spriteBatch = new SpriteBatch(GraphicsDevice);
 
       // TODO: use this.Content to load your game content here
+      map = Content.Load<Map>("Maps\\Map01");
     }
 
     /// <summary>
@@ -78,6 +89,7 @@ namespace Bounce.WindowsPhone
         this.Exit();
 
       // TODO: Add your update logic here
+      map.Update(gameTime.ElapsedGameTime.Milliseconds);
 
       base.Update(gameTime);
     }
@@ -91,6 +103,7 @@ namespace Bounce.WindowsPhone
       GraphicsDevice.Clear(Color.CornflowerBlue);
 
       // TODO: Add your drawing code here
+      map.Draw(mapDisplayDevice, viewport);
 
       base.Draw(gameTime);
     }
