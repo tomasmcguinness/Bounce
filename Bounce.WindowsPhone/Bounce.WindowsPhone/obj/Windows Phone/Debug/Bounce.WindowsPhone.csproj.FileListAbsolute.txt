@@ -20,9 +20,3 @@ C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windo
 C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\SquareGuy.xnb
 C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\Bounce.WindowsPhone.csprojResolveAssemblyReference.cache
 C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\16x16.xnb
-C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.xap
-C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\AppManifest.xaml
-C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\

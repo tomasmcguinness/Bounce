@@ -71,14 +71,15 @@ namespace Bounce.WindowsPhone
 
       camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
 
-      world = new World(new Vector2(0, 20));
+      world = new World(new Vector2(0, 5));
 
       Vector2 bodyPosition = new Vector2(10 / MeterInPixels, 10 / MeterInPixels);
       myBody = BodyFactory.CreateRectangle(world, 1.0f / MeterInPixels, 1.0f / MeterInPixels, 1f, bodyPosition);
       myBody.BodyType = BodyType.Dynamic;
-      myBody.Mass = 10.0f;
+      myBody.Mass = 1.0f;
       myBody.Restitution = 0.3f;
       myBody.Friction = 0.5f;
+      myBody.LinearVelocity = new Vector2(1.0f, 0);
 
       circleShape = new CircleShape(1.0f, 1.0f);
       fixture = myBody.CreateFixture(circleShape);
