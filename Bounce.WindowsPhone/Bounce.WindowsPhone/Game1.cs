@@ -73,8 +73,8 @@ namespace Bounce.WindowsPhone
 
       world = new World(new Vector2(0, 20));
 
-      Vector2 bodyPosition = new Vector2(10, 10);
-      myBody = BodyFactory.CreateRectangle(world, 1.0f, 1.0f, 1f, bodyPosition);
+      Vector2 bodyPosition = new Vector2(10 / MeterInPixels, 10 / MeterInPixels);
+      myBody = BodyFactory.CreateRectangle(world, 1.0f / MeterInPixels, 1.0f / MeterInPixels, 1f, bodyPosition);
       myBody.BodyType = BodyType.Dynamic;
       myBody.Mass = 10.0f;
       myBody.Restitution = 0.3f;
@@ -94,14 +94,14 @@ namespace Bounce.WindowsPhone
           if (tile != null)
           {
             // step 2. create a new box2d object to the box2d world
-            Body bd = BodyFactory.CreateRectangle(world, 1.0f, 1.0f, 1.0f);
+            Body bd = BodyFactory.CreateRectangle(world, 1.0f / MeterInPixels, 1.0f / MeterInPixels, 1.0f);
             bd.BodyType = BodyType.Static;
             bd.Restitution = 1.0f;
-            bd.Mass = 10000.0f;
-            bd.Position = new Vector2(x * 16, y * 16);
+            bd.Mass = 10.0f;
+            bd.Position = new Vector2((x * 16) / MeterInPixels, (y * 16) / MeterInPixels);
 
-            circleShape = new CircleShape(1.0f, 1.0f);
-            fixture = bd.CreateFixture(circleShape);
+            var edgeShape = new CircleShape(1.0f / MeterInPixels, 1.0f / MeterInPixels);
+            fixture = bd.CreateFixture(edgeShape);
           }
         }
       }
@@ -145,8 +145,8 @@ namespace Bounce.WindowsPhone
       // TODO: Add your update logic here
       map.Update(gameTime.ElapsedGameTime.Milliseconds);
 
-      camera.X = (int)myBody.Position.X;
-      camera.Y = (int)myBody.Position.Y;
+      camera.X = (int)(myBody.Position.X * MeterInPixels);
+      camera.Y = (int)(myBody.Position.Y * MeterInPixels);
 
       world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f);
 
@@ -163,8 +163,10 @@ namespace Bounce.WindowsPhone
 
       map.Draw(mapDisplayDevice, camera);
 
+      Vector2 circlePos = myBody.Position * MeterInPixels;
+
       spriteBatch.Begin();
-      spriteBatch.Draw(mSpriteTexture, myBody.Position, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+      spriteBatch.Draw(mSpriteTexture, circlePos, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
       spriteBatch.End();
 
       base.Draw(gameTime);
