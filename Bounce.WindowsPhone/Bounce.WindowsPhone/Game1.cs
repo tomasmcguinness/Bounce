@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework.Media;
 using xTile;
 using xTile.Display;
 using xTile.Dimensions;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Collision.Shapes;
+using FarseerPhysics.Factories;
+using xTile.Tiles;
 
 namespace Bounce.WindowsPhone
 {
@@ -25,10 +29,17 @@ namespace Bounce.WindowsPhone
 
     Map map;
     IDisplayDevice mapDisplayDevice;
-    xTile.Dimensions.Rectangle viewport;
+    xTile.Dimensions.Rectangle camera;
 
     Vector2 mPosition = new Vector2(0, 0);
     Texture2D mSpriteTexture;
+
+    World world;
+    Body myBody;
+    CircleShape circleShape;
+    Fixture fixture;
+
+    private const float MeterInPixels = 91f;
 
     public Game1()
     {
@@ -58,7 +69,42 @@ namespace Bounce.WindowsPhone
 
       map.LoadTileSheets(mapDisplayDevice);
 
-      viewport = new xTile.Dimensions.Rectangle(new Size(820, 480));
+      camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
+
+      world = new World(new Vector2(0, 20));
+
+      Vector2 bodyPosition = new Vector2(10, 10);
+      myBody = BodyFactory.CreateRectangle(world, 1.0f, 1.0f, 1f, bodyPosition);
+      myBody.BodyType = BodyType.Dynamic;
+      myBody.Mass = 10.0f;
+      myBody.Restitution = 0.3f;
+      myBody.Friction = 0.5f;
+
+      circleShape = new CircleShape(1.0f, 1.0f);
+      fixture = myBody.CreateFixture(circleShape);
+
+      TileArray groundTiles = map.GetLayer("HitGround").Tiles;
+
+      for (int y = 0; y < 48; y++)
+      {
+        for (int x = 0; x < 800; x++)
+        {
+          var tile = groundTiles[x, y];
+
+          if (tile != null)
+          {
+            // step 2. create a new box2d object to the box2d world
+            Body bd = BodyFactory.CreateRectangle(world, 1.0f, 1.0f, 1.0f);
+            bd.BodyType = BodyType.Static;
+            bd.Restitution = 1.0f;
+            bd.Mass = 10000.0f;
+            bd.Position = new Vector2(x * 16, y * 16);
+
+            circleShape = new CircleShape(1.0f, 1.0f);
+            fixture = bd.CreateFixture(circleShape);
+          }
+        }
+      }
     }
 
     /// <summary>
@@ -98,7 +144,11 @@ namespace Bounce.WindowsPhone
 
       // TODO: Add your update logic here
       map.Update(gameTime.ElapsedGameTime.Milliseconds);
-      viewport.X++;
+
+      camera.X = (int)myBody.Position.X;
+      camera.Y = (int)myBody.Position.Y;
+
+      world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f);
 
       base.Update(gameTime);
     }
@@ -111,11 +161,10 @@ namespace Bounce.WindowsPhone
     {
       GraphicsDevice.Clear(Color.CornflowerBlue);
 
-      // TODO: Add your drawing code here
-      map.Draw(mapDisplayDevice, viewport);
+      map.Draw(mapDisplayDevice, camera);
 
       spriteBatch.Begin();
-      spriteBatch.Draw(mSpriteTexture, mPosition, Color.White);
+      spriteBatch.Draw(mSpriteTexture, myBody.Position, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
       spriteBatch.End();
 
       base.Draw(gameTime);
