@@ -66,6 +66,15 @@
       <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Output>
       <Time>2012-03-08T16:27:03.4383404+00:00</Time>
     </Item>
+    <Item>
+      <Source>SquareGuy.png</Source>
+      <Name>SquareGuy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\SquareGuy.xnb</Output>
+      <Time>2012-03-12T14:07:15.9492598+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}</ContentProjectGUID>

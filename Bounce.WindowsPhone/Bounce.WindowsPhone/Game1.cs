@@ -27,6 +27,9 @@ namespace Bounce.WindowsPhone
     IDisplayDevice mapDisplayDevice;
     xTile.Dimensions.Rectangle viewport;
 
+    Vector2 mPosition = new Vector2(0, 0);
+    Texture2D mSpriteTexture;
+
     public Game1()
     {
       graphics = new GraphicsDeviceManager(this);
@@ -70,7 +73,7 @@ namespace Bounce.WindowsPhone
       // TODO: use this.Content to load your game content here
       map = Content.Load<Map>("Maps\\Map01");
 
-      //map.LoadTileSheets(mapDisplayDevice);
+      mSpriteTexture = Content.Load<Texture2D>("SquareGuy");
     }
 
     /// <summary>
@@ -110,6 +113,10 @@ namespace Bounce.WindowsPhone
 
       // TODO: Add your drawing code here
       map.Draw(mapDisplayDevice, viewport);
+
+      spriteBatch.Begin();
+      spriteBatch.Draw(mSpriteTexture, mPosition, Color.White);
+      spriteBatch.End();
 
       base.Draw(gameTime);
     }
