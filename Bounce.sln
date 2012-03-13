@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounce.WindowsPhone", "Bounce.WindowsPhone\Bounce.WindowsPhone\Bounce.WindowsPhone.csproj", "{F7CE7B24-344C-4257-B641-980A903326F3}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Bounce.WindowsPhoneContent", "Bounce.WindowsPhone\Bounce.WindowsPhoneContent\Bounce.WindowsPhoneContent.contentproj", "{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounce.WindowsPhoneContent", "Bounce.WindowsPhone\Bounce.WindowsPhoneContent\Bounce.WindowsPhoneContent.contentproj", "{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugView XNA WP7", "Bounce.WindowsPhone\DebugView XNA\DebugView XNA WP7.csproj", "{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{F7CE7B24-344C-4257-B641-980A903326F3}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
 		{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
 		{9B7B8D56-D2D2-4093-A15C-80C4CCE79E0B}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Release|Windows Phone.Build.0 = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

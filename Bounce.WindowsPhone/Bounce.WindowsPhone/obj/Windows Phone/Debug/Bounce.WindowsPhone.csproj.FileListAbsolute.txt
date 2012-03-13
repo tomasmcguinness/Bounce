@@ -42,3 +42,6 @@ C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\
 C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Bounce.WindowsPhone.xap
 C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\XapCacheFile.xml
 C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\golfball.xnb
+C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\font.xnb
+C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\DebugViewXNA.dll
+C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\DebugViewXNA.pdb

@@ -96,6 +96,10 @@
       <Name>Bounce.WindowsPhoneContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
+    <ProjectReference Include="..\DebugView XNA\DebugView XNA WP7.csproj">
+      <Project>{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}</Project>
+      <Name>DebugView XNA WP7</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
