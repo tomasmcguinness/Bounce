@@ -7,69 +7,33 @@
       <Importer>TideImporter</Importer>
       <Processor>TideProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Maps\Map01.xnb</Output>
-      <Time>2012-03-12T17:33:06.4063251+00:00</Time>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Maps\Map01.xnb</Output>
+      <Time>2012-03-12T18:43:06.5862104+00:00</Time>
       <Dependency>
         <Key>TileSheets\Background01.png</Key>
-        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
+        <Value>2012-03-12T18:43:06.5962104+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\Background02.png</Key>
-        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
+        <Value>2012-03-12T18:43:06.5962104+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\Background03.png</Key>
-        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
+        <Value>2012-03-12T18:43:06.5962104+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\16x16.png</Key>
-        <Value>2012-03-12T16:14:36.9674283+00:00</Value>
+        <Value>2012-03-12T18:43:06.5862104+00:00</Value>
       </Dependency>
       <Dependency>
         <Key>TileSheets\TileSheet01.png</Key>
-        <Value>2012-03-08T16:27:03.4383404+00:00</Value>
+        <Value>2012-03-12T18:43:06.5962104+00:00</Value>
       </Dependency>
-      <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Request>
-      <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Request>
-      <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb</Request>
-      <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\16x16.xnb</Request>
-      <Request>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Request>
-    </Item>
-    <Item>
-      <Source>TileSheets\Background01.png</Source>
-      <Name>TileSheets\Background01</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Output>
-      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
-    </Item>
-    <Item>
-      <Source>TileSheets\Background02.png</Source>
-      <Name>TileSheets\Background02</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Output>
-      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
-    </Item>
-    <Item>
-      <Source>TileSheets\Background03.png</Source>
-      <Name>TileSheets\Background03</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb</Output>
-      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
-    </Item>
-    <Item>
-      <Source>TileSheets\TileSheet01.png</Source>
-      <Name>TileSheets\TileSheet01</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Output>
-      <Time>2012-03-08T16:27:03.4383404+00:00</Time>
+      <Request>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Request>
+      <Request>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Request>
+      <Request>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb</Request>
+      <Request>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\16x16.xnb</Request>
+      <Request>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Request>
     </Item>
     <Item>
       <Source>SquareGuy.png</Source>
@@ -77,8 +41,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\SquareGuy.xnb</Output>
-      <Time>2012-03-12T14:07:15.9492598+00:00</Time>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\SquareGuy.xnb</Output>
+      <Time>2012-03-12T18:43:06.5862104+00:00</Time>
+    </Item>
+    <Item>
+      <Source>TileSheets\Background01.png</Source>
+      <Name>TileSheets\Background01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background01.xnb</Output>
+      <Time>2012-03-12T18:43:06.5962104+00:00</Time>
+    </Item>
+    <Item>
+      <Source>TileSheets\Background02.png</Source>
+      <Name>TileSheets\Background02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background02.xnb</Output>
+      <Time>2012-03-12T18:43:06.5962104+00:00</Time>
+    </Item>
+    <Item>
+      <Source>TileSheets\Background03.png</Source>
+      <Name>TileSheets\Background03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\Background03.xnb</Output>
+      <Time>2012-03-12T18:43:06.5962104+00:00</Time>
     </Item>
     <Item>
       <Source>TileSheets\16x16.png</Source>
@@ -86,8 +77,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\16x16.xnb</Output>
-      <Time>2012-03-12T16:14:36.9674283+00:00</Time>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\16x16.xnb</Output>
+      <Time>2012-03-12T18:43:06.5862104+00:00</Time>
+    </Item>
+    <Item>
+      <Source>TileSheets\TileSheet01.png</Source>
+      <Name>TileSheets\TileSheet01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\TileSheets\TileSheet01.xnb</Output>
+      <Time>2012-03-12T18:43:06.5962104+00:00</Time>
+    </Item>
+    <Item>
+      <Source>golfball.png</Source>
+      <Name>golfball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\golfball.xnb</Output>
+      <Time>2012-03-13T09:03:30.1255606+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -96,43 +105,43 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhoneContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhoneContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Development\Personal\Bounce\xTile.Pipeline.dll</Key>
-        <Value>2011-08-13T15:09:44.6598234+01:00</Value>
+        <Key>C:\Development\Bounce\xTile.Pipeline.dll</Key>
+        <Value>2012-03-12T18:43:06.6962106+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+01:00</Value>
+        <Value>2011-09-01T17:22:30+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-10-14T12:00:06.7946993+01:00</Value>
+        <Value>2012-02-05T09:51:20.3363877+00:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

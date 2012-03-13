@@ -1,1 +1,2 @@
 C:\Development\Personal\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhoneContent\obj\Windows Phone\Debug\Bounce.WindowsPhoneContent.contentprojResolveAssemblyReference.cache
+C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhoneContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
