@@ -81,26 +81,23 @@ namespace Bounce.WindowsPhone
             map.LoadTileSheets(mapDisplayDevice);
 
             camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
-            cameraPosition = new Vector2(1, 220);
+            cameraPosition = new Vector2(0, 0);
             screenCenter = new Vector2(graphics.GraphicsDevice.Viewport.Width / 2f, graphics.GraphicsDevice.Viewport.Height / 2f);
             view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
-            world = new World(new Vector2(0, 0));
+            world = new World(new Vector2(0, 1.0f));
 
             physicsDebug = new DebugViewXNA(world);
             physicsDebug.LoadContent(this.GraphicsDevice, this.Content);
             physicsDebug.AppendFlags(DebugViewFlags.Shape);
             physicsDebug.AppendFlags(DebugViewFlags.PolygonPoints);
 
-            Vector2 bodyPosition = new Vector2(1 / MeterInPixels, 220 / MeterInPixels);
-            myBody = BodyFactory.CreateRectangle(world, 1.0f / MeterInPixels, 1.0f / MeterInPixels, 1f, bodyPosition);
+            Vector2 bodyPosition = new Vector2(250, 220);
+            myBody = BodyFactory.CreateCircle(world, 16.0f, 1f, bodyPosition);
             myBody.BodyType = BodyType.Dynamic;
             myBody.Mass = 1.0f;
-            myBody.Restitution = 0.3f;
+            myBody.Restitution = 100f;
             myBody.Friction = 0.5f;
-            myBody.LinearVelocity = new Vector2(1.0f, 0);
-
-            circleShape = new CircleShape(1.0f, 1.0f);
-            fixture = myBody.CreateFixture(circleShape);
+            myBody.LinearVelocity = new Vector2(0, 0);
 
             Layer layer = map.GetLayer("HitGround");
             TileArray groundTiles = layer.Tiles;
@@ -113,15 +110,11 @@ namespace Bounce.WindowsPhone
 
                     if (tile != null)
                     {
-                        // step 2. create a new box2d object to the box2d world
                         Body bd = BodyFactory.CreateRectangle(world, 16.0f, 16.0f, 1.0f);
                         bd.BodyType = BodyType.Static;
                         bd.Restitution = 1.0f;
                         bd.Mass = 1.0f;
-                        bd.Position = new Vector2(x * 16, y * 16);
-
-                        var edgeShape = new CircleShape(16.0f, 1.0f);
-                        fixture = bd.CreateFixture(edgeShape);
+                        bd.Position = new Vector2((x * 16) + 7, (y * 16) + 7);
                     }
                 }
             }
@@ -162,22 +155,22 @@ namespace Bounce.WindowsPhone
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
             map.Update(gameTime.ElapsedGameTime.Milliseconds);
 
             // The ball cannot appear to move more than half way across the screen.
             //
-            camera.X = (int)(myBody.Position.X * MeterInPixels);
-            camera.Y = (int)(myBody.Position.Y * MeterInPixels);
+            //camera.X = (int)(myBody.Position.X * MeterInPixels);
+            //camera.Y = (int)(myBody.Position.Y * MeterInPixels);
 
-            if (camera.X > 400) camera.X = 400;
+            var newPosition = myBody.Position - screenCenter;
 
+            camera.X = (int)newPosition.X;
+            camera.Y = (int)newPosition.Y;
 
-            cameraPosition.X = (int)(myBody.Position.X * MeterInPixels);
-            cameraPosition.Y = (int)(myBody.Position.Y * MeterInPixels);
+            cameraPosition.X = myBody.Position.X;
+            cameraPosition.Y = myBody.Position.Y;
 
             //view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
-            view = Matrix.CreateTranslation(new Vector3(cameraPosition, 0f)) * Matrix.CreateTranslation(new Vector3(cameraPosition, 0f));
 
             world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds);
 
@@ -194,7 +187,7 @@ namespace Bounce.WindowsPhone
 
             map.Draw(mapDisplayDevice, camera);
 
-            Vector2 circlePos = myBody.Position * MeterInPixels;
+            Vector2 circlePos = myBody.Position;// *MeterInPixels;
 
             spriteBatch.Begin();
             spriteBatch.Draw(mSpriteTexture, circlePos, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
