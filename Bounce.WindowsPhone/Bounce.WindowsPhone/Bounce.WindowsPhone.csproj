@@ -52,8 +52,8 @@
     <XnaCompressContent>false</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FarseerPhysicsXNAWP7">
-      <HintPath>..\..\packages\FarseerPhysicsXNAWP7.3.3.1.37294\lib\net40-Client\FarseerPhysicsXNAWP7.dll</HintPath>
+    <Reference Include="FarseerPhysicsXNA">
+      <HintPath>..\..\FarseerPhysicsXNA.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="Microsoft.Xna.Framework.Game" />
@@ -96,9 +96,13 @@
       <Name>Bounce.WindowsPhoneContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
-    <ProjectReference Include="..\DebugView XNA\DebugView XNA WP7.csproj">
-      <Project>{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}</Project>
-      <Name>DebugView XNA WP7</Name>
+    <ProjectReference Include="..\FarseerXNABase\FarseerXNABase.csproj">
+      <Project>{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}</Project>
+      <Name>FarseerXNABase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RenderXNA\RenderXNA.csproj">
+      <Project>{8267977D-62A4-4B31-8351-842F46EF6D29}</Project>
+      <Name>RenderXNA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

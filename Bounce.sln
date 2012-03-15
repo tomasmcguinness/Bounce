@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounce.WindowsPhoneContent"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugView XNA WP7", "Bounce.WindowsPhone\DebugView XNA\DebugView XNA WP7.csproj", "{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarseerXNABase", "Bounce.WindowsPhone\FarseerXNABase\FarseerXNABase.csproj", "{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderXNA", "Bounce.WindowsPhone\RenderXNA\RenderXNA.csproj", "{8267977D-62A4-4B31-8351-842F46EF6D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Windows Phone = Debug|Windows Phone
@@ -25,6 +29,14 @@ Global
 		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
 		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
 		{F658A60D-5941-4CBE-8EC1-8AE20E93F60E}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{93EB90E8-C1E3-4D32-8CD1-85302FBBE5DA}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{8267977D-62A4-4B31-8351-842F46EF6D29}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{8267977D-62A4-4B31-8351-842F46EF6D29}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{8267977D-62A4-4B31-8351-842F46EF6D29}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{8267977D-62A4-4B31-8351-842F46EF6D29}.Release|Windows Phone.Build.0 = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

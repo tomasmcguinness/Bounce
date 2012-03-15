@@ -45,6 +45,15 @@
       <Time>2012-03-12T18:43:06.5862104+00:00</Time>
     </Item>
     <Item>
+      <Source>golfball.png</Source>
+      <Name>golfball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\golfball.xnb</Output>
+      <Time>2012-03-13T09:03:30.1255606+00:00</Time>
+    </Item>
+    <Item>
       <Source>TileSheets\Background01.png</Source>
       <Name>TileSheets\Background01</Name>
       <Importer>TextureImporter</Importer>
@@ -90,13 +99,31 @@
       <Time>2012-03-12T18:43:06.5962104+00:00</Time>
     </Item>
     <Item>
-      <Source>golfball.png</Source>
-      <Name>golfball</Name>
+      <Source>Fonts\font.spritefont</Source>
+      <Name>Fonts\font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Fonts\font.xnb</Output>
+      <Time>2012-03-15T18:25:04.1297727+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Materials\line.png</Source>
+      <Name>Materials\line</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\golfball.xnb</Output>
-      <Time>2012-03-13T09:03:30.1255606+00:00</Time>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\Materials\line.xnb</Output>
+      <Time>2012-03-15T18:25:04.1597727+00:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Development\Bounce\Bounce.WindowsPhone\Bounce.WindowsPhone\bin\Windows Phone\Debug\Content\blank.xnb</Output>
+      <Time>2012-03-15T19:00:46.5028683+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

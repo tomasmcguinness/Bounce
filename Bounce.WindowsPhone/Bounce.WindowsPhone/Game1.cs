@@ -17,8 +17,10 @@ using FarseerPhysics.Collision.Shapes;
 using FarseerPhysics.Factories;
 using xTile.Tiles;
 using xTile.Layers;
-using FarseerPhysics.DebugViews;
 using FarseerPhysics;
+using RenderXNA;
+using FarseerXNABase.ScreenSystem;
+using FarseerXNABase;
 
 namespace Bounce.WindowsPhone
 {
@@ -42,13 +44,17 @@ namespace Bounce.WindowsPhone
         CircleShape circleShape;
         Fixture fixture;
 
-        DebugViewXNA physicsDebug;
-
         private Matrix view;
         private Vector2 cameraPosition;
         private Vector2 screenCenter;
 
         private const float MeterInPixels = 91f;
+
+        RenderXNAHelper RenderHelper;
+        Camera2D Camera;
+        Body BoxBody, FloorBody;
+        Texture2D MyTexture;
+
 
         public Game1()
         {
@@ -76,48 +82,47 @@ namespace Bounce.WindowsPhone
 
             base.Initialize();
 
-            mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
+            //mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
 
-            map.LoadTileSheets(mapDisplayDevice);
+            //map.LoadTileSheets(mapDisplayDevice);
 
-            camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
-            cameraPosition = new Vector2(0, 0);
-            screenCenter = new Vector2(graphics.GraphicsDevice.Viewport.Width / 2f, graphics.GraphicsDevice.Viewport.Height / 2f);
-            view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
-            world = new World(new Vector2(0, 1.0f));
+            //camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
+            //cameraPosition = new Vector2(0, 0);
+            //screenCenter = new Vector2(graphics.GraphicsDevice.Viewport.Width / 2f, graphics.GraphicsDevice.Viewport.Height / 2f);
+            //view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
 
-            physicsDebug = new DebugViewXNA(world);
-            physicsDebug.LoadContent(this.GraphicsDevice, this.Content);
-            physicsDebug.AppendFlags(DebugViewFlags.Shape);
-            physicsDebug.AppendFlags(DebugViewFlags.PolygonPoints);
+            //physicsDebug = new DebugViewXNA(world);
+            //physicsDebug.LoadContent(this.GraphicsDevice, this.Content);
+            //physicsDebug.AppendFlags(DebugViewFlags.Shape);
+            //physicsDebug.AppendFlags(DebugViewFlags.PolygonPoints);
 
-            Vector2 bodyPosition = new Vector2(250, 220);
-            myBody = BodyFactory.CreateCircle(world, 16.0f, 1f, bodyPosition);
-            myBody.BodyType = BodyType.Dynamic;
-            myBody.Mass = 1.0f;
-            myBody.Restitution = 100f;
-            myBody.Friction = 0.5f;
-            myBody.LinearVelocity = new Vector2(0, 0);
+            //Vector2 bodyPosition = new Vector2(260, 220);
+            //myBody = BodyFactory.CreateCircle(world, 16.0f, 1f, bodyPosition);
+            //myBody.BodyType = BodyType.Dynamic;
+            //myBody.Mass = 1.0f;
+            //myBody.Restitution = 100f;
+            //myBody.Friction = 0.5f;
+            //myBody.LinearVelocity = new Vector2(0, 0);
 
-            Layer layer = map.GetLayer("HitGround");
-            TileArray groundTiles = layer.Tiles;
+            //Layer layer = map.GetLayer("HitGround");
+            //TileArray groundTiles = layer.Tiles;
 
-            for (int x = 0; x < 800; x++)
-            {
-                for (int y = 0; y < 48; y++)
-                {
-                    Tile tile = groundTiles[x, y];
+            //for (int x = 0; x < 800; x++)
+            //{
+            //    for (int y = 0; y < 48; y++)
+            //    {
+            //        Tile tile = groundTiles[x, y];
 
-                    if (tile != null)
-                    {
-                        Body bd = BodyFactory.CreateRectangle(world, 16.0f, 16.0f, 1.0f);
-                        bd.BodyType = BodyType.Static;
-                        bd.Restitution = 1.0f;
-                        bd.Mass = 1.0f;
-                        bd.Position = new Vector2((x * 16) + 7, (y * 16) + 7);
-                    }
-                }
-            }
+            //        if (tile != null)
+            //        {
+            //            Body bd = BodyFactory.CreateRectangle(world, 16.0f, 16.0f, 1.0f);
+            //            bd.BodyType = BodyType.Static;
+            //            bd.Restitution = 1.0f;
+            //            bd.Mass = 1.0f;
+            //            bd.Position = new Vector2((x * 16) + 7, (y * 16) + 7);
+            //        }
+            //    }
+            //}
         }
 
         /// <summary>
@@ -133,6 +138,48 @@ namespace Bounce.WindowsPhone
             map = Content.Load<Map>("Maps\\Map01");
 
             mSpriteTexture = Content.Load<Texture2D>("golfball");
+
+            MyTexture = Content.Load<Texture2D>("blank");
+
+
+            world = new World(new Vector2(0, 1.0f));
+
+            RenderHelper = new RenderXNAHelper(world);
+            RenderHelper.AppendFlags(DebugViewFlags.TexturedShape);
+            RenderHelper.RemoveFlags(DebugViewFlags.Shape);
+
+            RenderHelper.DefaultShapeColor = Color.White;
+            RenderHelper.SleepingShapeColor = Color.LightGray;
+            RenderHelper.LoadContent(GraphicsDevice, Content);
+
+            //myBody = BodyFactory.CreateBody(world);
+            //FixtureFactory.CreateCircle(world, 16f, 1.0f, new Vector2(50, 50), myBody);
+            //myBody.BodyType = BodyType.Dynamic;
+            //myBody.Mass = 1.0f;
+            //myBody.LinearVelocity = new Vector2(0, 0);
+
+            BoxBody = BodyFactory.CreateBody(world);
+            FixtureFactory.CreateRectangle(ConvertUnits.ToSimUnits(50), ConvertUnits.ToSimUnits(50), 10, Vector2.Zero, BoxBody);
+            foreach (Fixture fixture in BoxBody.FixtureList)
+            {
+                fixture.Restitution = 0.5f;
+                fixture.Friction = 0.5f;
+            }
+            BoxBody.BodyType = BodyType.Dynamic;
+
+            BoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(240, 25));
+
+
+            //Create Floor
+            Fixture floorFixture = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(480), ConvertUnits.ToSimUnits(10), 10);
+            floorFixture.Restitution = 0.5f;        //Bounceability
+            floorFixture.Friction = 0.5f;           //Friction
+            FloorBody = floorFixture.Body;          //Get Body from Fixture
+            FloorBody.IsStatic = true;
+
+            FloorBody.Position = ConvertUnits.ToSimUnits(new Vector2(240, 700));
+
+            Camera = new Camera2D(GraphicsDevice);
         }
 
         /// <summary>
@@ -155,22 +202,23 @@ namespace Bounce.WindowsPhone
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            map.Update(gameTime.ElapsedGameTime.Milliseconds);
+            //map.Update(gameTime.ElapsedGameTime.Milliseconds);
 
-            // The ball cannot appear to move more than half way across the screen.
-            //
-            //camera.X = (int)(myBody.Position.X * MeterInPixels);
-            //camera.Y = (int)(myBody.Position.Y * MeterInPixels);
+            //var newPosition = myBody.Position - screenCenter;
 
-            var newPosition = myBody.Position - screenCenter;
+            //camera.X = (int)newPosition.X;
+            //camera.Y = (int)newPosition.Y;
 
-            camera.X = (int)newPosition.X;
-            camera.Y = (int)newPosition.Y;
+            //cameraPosition.X = myBody.Position.X / 2f;
+            //cameraPosition.Y = myBody.Position.Y / 2f;
 
-            cameraPosition.X = myBody.Position.X;
-            cameraPosition.Y = myBody.Position.Y;
-
+            ////view = Matrix.CreateTranslation(new Vector3(screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
             //view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
+
+            // Update the camera
+            Camera.Update();
+            RenderHelper.Update(gameTime);
+
 
             world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds);
 
@@ -185,16 +233,18 @@ namespace Bounce.WindowsPhone
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            map.Draw(mapDisplayDevice, camera);
+            //map.Draw(mapDisplayDevice, camera);
 
-            Vector2 circlePos = myBody.Position;// *MeterInPixels;
+            //Vector2 circlePos = myBody.Position;// *MeterInPixels;
 
             spriteBatch.Begin();
-            spriteBatch.Draw(mSpriteTexture, circlePos, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            //spriteBatch.Draw(mSpriteTexture, myBody.Position, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)(ConvertUnits.ToDisplayUnits(BoxBody.Position.X) - 25), (int)(ConvertUnits.ToDisplayUnits(BoxBody.Position.Y) - 25), 50, 50), Color.Green);
+            spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)ConvertUnits.ToDisplayUnits(FloorBody.Position).X - 240, (int)ConvertUnits.ToDisplayUnits(FloorBody.Position).Y - 5, 480, 10), null, Color.Gray, FloorBody.Rotation, new Vector2(0, 0), SpriteEffects.None, 0);
             spriteBatch.End();
 
-            Matrix proj = Matrix.CreateOrthographicOffCenter(0f, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, 0f, 0f, 1f);
-            physicsDebug.RenderDebugData(ref proj, ref view);
+            RenderHelper.RenderDebugData(ref Camera2D.Projection, ref Camera2D.View);
+
 
             base.Draw(gameTime);
         }

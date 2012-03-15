@@ -38,6 +38,11 @@
       <Importer>TideImporter</Importer>
       <Processor>TideProcessor</Processor>
     </Compile>
+    <Compile Include="Fonts\font.spritefont">
+      <Name>font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
     <None Include="TileSheets\Background01.png">
       <Name>Background01</Name>
       <Importer>TextureImporter</Importer>
@@ -76,6 +81,20 @@
   <ItemGroup>
     <Compile Include="golfball.png">
       <Name>golfball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Materials\line.png">
+      <Name>line</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="blank.png">
+      <Name>blank</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
