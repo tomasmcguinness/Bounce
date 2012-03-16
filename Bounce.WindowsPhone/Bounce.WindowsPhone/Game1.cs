@@ -142,7 +142,7 @@ namespace Bounce.WindowsPhone
             MyTexture = Content.Load<Texture2D>("blank");
 
 
-            world = new World(new Vector2(0, 1.0f));
+            world = new World(new Vector2(0, 15.0f));
 
             RenderHelper = new RenderXNAHelper(world);
             RenderHelper.AppendFlags(DebugViewFlags.TexturedShape);
@@ -162,22 +162,22 @@ namespace Bounce.WindowsPhone
             FixtureFactory.CreateRectangle(ConvertUnits.ToSimUnits(50), ConvertUnits.ToSimUnits(50), 10, Vector2.Zero, BoxBody);
             foreach (Fixture fixture in BoxBody.FixtureList)
             {
-                fixture.Restitution = 0.5f;
+                fixture.Restitution = 1.0f;
                 fixture.Friction = 0.5f;
             }
             BoxBody.BodyType = BodyType.Dynamic;
 
-            BoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(240, 25));
+            BoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(20, 25));
 
 
             //Create Floor
-            Fixture floorFixture = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(480), ConvertUnits.ToSimUnits(10), 10);
+            Fixture floorFixture = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(800), ConvertUnits.ToSimUnits(10), 10);
             floorFixture.Restitution = 0.5f;        //Bounceability
             floorFixture.Friction = 0.5f;           //Friction
             FloorBody = floorFixture.Body;          //Get Body from Fixture
             FloorBody.IsStatic = true;
 
-            FloorBody.Position = ConvertUnits.ToSimUnits(new Vector2(240, 700));
+            FloorBody.Position = ConvertUnits.ToSimUnits(new Vector2(0, 400));
 
             Camera = new Camera2D(GraphicsDevice);
         }
@@ -220,7 +220,8 @@ namespace Bounce.WindowsPhone
             RenderHelper.Update(gameTime);
 
 
-            world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds);
+            //world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds);
+            world.Step(Math.Min((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f, (1f / 30f)));
 
             base.Update(gameTime);
         }
