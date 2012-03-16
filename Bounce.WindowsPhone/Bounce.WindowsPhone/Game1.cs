@@ -55,6 +55,7 @@ namespace Bounce.WindowsPhone
         Body BoxBody, FloorBody;
         Texture2D MyTexture;
 
+        List<Body> MapBodies = new List<Body>();
 
         public Game1()
         {
@@ -82,11 +83,10 @@ namespace Bounce.WindowsPhone
 
             base.Initialize();
 
-            //mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
+            mapDisplayDevice = new XnaDisplayDevice(this.Content, this.GraphicsDevice);
+            map.LoadTileSheets(mapDisplayDevice);
+            camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
 
-            //map.LoadTileSheets(mapDisplayDevice);
-
-            //camera = new xTile.Dimensions.Rectangle(new Size(820, 480));
             //cameraPosition = new Vector2(0, 0);
             //screenCenter = new Vector2(graphics.GraphicsDevice.Viewport.Width / 2f, graphics.GraphicsDevice.Viewport.Height / 2f);
             //view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
@@ -141,7 +141,6 @@ namespace Bounce.WindowsPhone
 
             MyTexture = Content.Load<Texture2D>("blank");
 
-
             world = new World(new Vector2(0, 15.0f));
 
             RenderHelper = new RenderXNAHelper(world);
@@ -152,12 +151,6 @@ namespace Bounce.WindowsPhone
             RenderHelper.SleepingShapeColor = Color.LightGray;
             RenderHelper.LoadContent(GraphicsDevice, Content);
 
-            //myBody = BodyFactory.CreateBody(world);
-            //FixtureFactory.CreateCircle(world, 16f, 1.0f, new Vector2(50, 50), myBody);
-            //myBody.BodyType = BodyType.Dynamic;
-            //myBody.Mass = 1.0f;
-            //myBody.LinearVelocity = new Vector2(0, 0);
-
             BoxBody = BodyFactory.CreateBody(world);
             FixtureFactory.CreateRectangle(ConvertUnits.ToSimUnits(50), ConvertUnits.ToSimUnits(50), 10, Vector2.Zero, BoxBody);
             foreach (Fixture fixture in BoxBody.FixtureList)
@@ -166,20 +159,42 @@ namespace Bounce.WindowsPhone
                 fixture.Friction = 0.5f;
             }
             BoxBody.BodyType = BodyType.Dynamic;
-
-            BoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(20, 25));
-
+            BoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(400, 25));
 
             //Create Floor
-            Fixture floorFixture = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(800), ConvertUnits.ToSimUnits(10), 10);
-            floorFixture.Restitution = 0.5f;        //Bounceability
-            floorFixture.Friction = 0.5f;           //Friction
-            FloorBody = floorFixture.Body;          //Get Body from Fixture
-            FloorBody.IsStatic = true;
+            //Fixture floorFixture = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(800), ConvertUnits.ToSimUnits(10), 10);
+            //floorFixture.Restitution = 0.5f;        //Bounceability
+            //floorFixture.Friction = 0.5f;           //Friction
+            //FloorBody = floorFixture.Body;          //Get Body from Fixture
+            //FloorBody.IsStatic = true;
 
-            FloorBody.Position = ConvertUnits.ToSimUnits(new Vector2(0, 400));
+            //FloorBody.Position = ConvertUnits.ToSimUnits(new Vector2(0, 400));
+
+            Layer layer = map.GetLayer("HitGround");
+            TileArray groundTiles = layer.Tiles;
+
+            for (int x = 0; x < 800; x++)
+            {
+                for (int y = 0; y < 48; y++)
+                {
+                    Tile tile = groundTiles[x, y];
+
+                    if (tile != null)
+                    {
+                        Fixture smallBox = FixtureFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(16), ConvertUnits.ToSimUnits(16), 10);
+                        smallBox.Restitution = 0.5f;        //Bounceability
+                        smallBox.Friction = 0.5f;           //Friction
+                        var smallBoxBody = smallBox.Body;          //Get Body from Fixture
+                        smallBoxBody.IsStatic = true;
+                        smallBoxBody.Position = ConvertUnits.ToSimUnits(new Vector2(x * 16, y * 16));
+
+                        MapBodies.Add(smallBoxBody);
+                    }
+                }
+            }
 
             Camera = new Camera2D(GraphicsDevice);
+            Camera.TrackingBody = BoxBody;
         }
 
         /// <summary>
@@ -216,12 +231,10 @@ namespace Bounce.WindowsPhone
             //view = Matrix.CreateTranslation(new Vector3(cameraPosition - screenCenter, 0f)) * Matrix.CreateTranslation(new Vector3(screenCenter, 0f));
 
             // Update the camera
-            Camera.Update();
-            RenderHelper.Update(gameTime);
 
-
-            //world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds);
             world.Step(Math.Min((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f, (1f / 30f)));
+            RenderHelper.Update(gameTime);
+            Camera.Update();
 
             base.Update(gameTime);
         }
@@ -234,18 +247,20 @@ namespace Bounce.WindowsPhone
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            //map.Draw(mapDisplayDevice, camera);
-
-            //Vector2 circlePos = myBody.Position;// *MeterInPixels;
+            map.Draw(mapDisplayDevice, camera);
 
             spriteBatch.Begin();
-            //spriteBatch.Draw(mSpriteTexture, myBody.Position, null, Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)(ConvertUnits.ToDisplayUnits(BoxBody.Position.X) - 25), (int)(ConvertUnits.ToDisplayUnits(BoxBody.Position.Y) - 25), 50, 50), Color.Green);
-            spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)ConvertUnits.ToDisplayUnits(FloorBody.Position).X - 240, (int)ConvertUnits.ToDisplayUnits(FloorBody.Position).Y - 5, 480, 10), null, Color.Gray, FloorBody.Rotation, new Vector2(0, 0), SpriteEffects.None, 0);
+            //spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)ConvertUnits.ToDisplayUnits(FloorBody.Position).X - 240, (int)ConvertUnits.ToDisplayUnits(FloorBody.Position).Y - 5, 480, 10), null, Color.Gray, FloorBody.Rotation, new Vector2(0, 0), SpriteEffects.None, 0);
+
+            foreach (var body in MapBodies)
+            {
+                spriteBatch.Draw(MyTexture, new Microsoft.Xna.Framework.Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position).X, (int)ConvertUnits.ToDisplayUnits(body.Position).Y, 16, 16), null, Color.Gray, body.Rotation, new Vector2(0, 0), SpriteEffects.None, 0);
+            }
+
             spriteBatch.End();
 
             RenderHelper.RenderDebugData(ref Camera2D.Projection, ref Camera2D.View);
-
 
             base.Draw(gameTime);
         }
