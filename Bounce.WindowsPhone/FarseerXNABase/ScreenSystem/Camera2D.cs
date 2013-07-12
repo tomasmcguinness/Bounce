@@ -331,7 +331,7 @@ namespace FarseerXNABase.ScreenSystem
         public void Update()
         {
             if (TrackingBody != null)
-                Position = TrackingBody.Position;
+                Position = ConvertUnits.ToDisplayUnits(TrackingBody.Position);
 
             if (_targetYPositionReached == false)
             {
